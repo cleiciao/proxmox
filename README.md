@@ -19,6 +19,7 @@ Nessa primeira abordagem vamos criar a maquina virtual onde iremos instalar de f
  processador: 2 nucleos</br>
  hd: 20</br>
  rede: modo bridge
+ modo promisco da placa: permitir tudo
  
  
  Link para dowload do PVE
