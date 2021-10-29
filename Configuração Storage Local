@@ -1,0 +1,24 @@
+#Configuração Storage Local
+O procedimento abaixo mostra como configurar um Storage Local no Proxmox
+
+Primeiramente vamos verificar se nosso disco foi identifica pelo nosso Proxmox:
+
+fdisk -l 
+
+Esse comando irá listar todos os discos conectados ao nosso servidor
+
+
+
+Localize o Disco que será usado como Storage
+
+o comando cfdisk /dev/sdb  > Disco que irei usar para Storage
+
+
+O cfdisk irá perguntar qual o tipo de partição que iremos usar 
+GPT
+MSDOS
+
+
+
+Iremos utilizar GPT e depois iremos criar a partição escolhendo a opção NEW e escolher o tipo na opção TYPE para salvar basta escolher a opção WRITE e depois sair mna opçõ QUIT.
+
