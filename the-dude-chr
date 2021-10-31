@@ -21,7 +21,7 @@ qemu img info  chr-6.48.5.img
 
 Por padrão a imagem da CHR vem com tamanho do disco reduzido 64 Mb, vamos redimencionar o tamanho com o comando 
 
-qemu-img resize chr-6.48.5.img
+qemu-img resize chr-6.48.5.img +10G
 
 Se aparecer "Image Resized" deu tudo certo podemos prosseguir.
 
