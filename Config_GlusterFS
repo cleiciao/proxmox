@@ -1,4 +1,18 @@
+Configuração Cluster Proxmox e GlsuterFS com 2 NÓS
+
 
 Nessa etapa iremos detalhar a configuração do glusterfs no promox para armazenamento distribuido entre os Nós.
 
+REDE
+É recomendado 4 placas de rede para configuração desse cenário.
+1 placa de rede para gerencia do Servidor 
+1 placa de rede para ser usado como LAN.
+2 placa de rede para comunicação do Cluster que será configrada como BOND para maior largura de banda.
+###################################################################################################################
+
+Discos
+
+1 disco 120GB para instalação do Proxmox
+1 disco de 1TB para as VMS que iremos criar futuramente.
 Consideramos que os discos estejam conectados e formatados em seus respectivos Nós do Cluster Proxmox.
+###################################################################################################################
