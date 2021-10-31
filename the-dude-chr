@@ -1,7 +1,7 @@
 Processo de instalação de uma CHR no Proxmox
 
 Antes de mais nada vamos deixar a VM criada porém vamos colocar um disco pequeno pois vamos importar o disco que iremos baixar.
-A criação da VM é padrão só alterando a memória e processador, disco podemos deixar com 1GB pois iremos remover depois.
+A criação da VM é padrão só alterando a memória e processador de acordo com que você achar melhor, disco podemos deixar com 1GB pois iremos remover depois.
 
 
 Para baixar a imagem vamos até o site da mikrotik https://mikrotik.com/download. Pegaremos o tipo de arquivo RAW
