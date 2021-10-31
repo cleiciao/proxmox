@@ -1,0 +1,37 @@
+Processo de instalação de uma CHR no Proxmox
+
+Antes de mais nada vamos deixar a VM criada porém vamos colocar um disco pequeno pois vamos importar o disco que iremos baixar.
+A criação da VM é padrão só alterando a memória e processador, disco podemos deixar com 1GB pois iremos remover depois.
+
+
+Para baixar a imagem vamos até o site da mikrotik https://mikrotik.com/download. Pegaremos o tipo de arquivo RAW
+
+No Proxmox vamos acessar o SHELL e baixar a imagem que vamos usar, dependendo da data que você estiver instalando poderá haver novas versões.
+
+wget https://download.mikrotik.com/routeros/6.48.5/chr-6.48.5.img.zip
+
+Agora que baixamos a imagem vamos descompactar
+
+unzip chr-6.48.5.img.zip
+
+Checando as informações do arquivo
+
+qemu img info  chr-6.48.5.img
+
+
+Por padrão a imagem da CHR vem com tamanho do disco reduzido 64 Mb, vamos redimencionar o tamanho com o comando 
+
+qemu-img resize chr-6.48.5.img
+
+Se aparece "Image Resized" de tudo certo
+
+Com a VM criada e a imagem de disco que iremos usar baixada vamos importar o disco para VM com o comando 
+
+qm importdisk "numero da VM" ex: 100 "imagem do disco" ex: chr-6.48.5.img e o "Storage que será usado" ex: local-lvm
+
+O processo de importação demora uns minutos é só aguardar. Após o termino da importação vamos na opção de HARDWARE da maquina para atachar nosso novo disco.
+Com novo disco atachado podemos remover o disco de 1GB que inserimos no momento da criação da VM. Por ultimo podemos conferir no menu opções qual disco esta para ser
+inicializado primeiro. Tudo conferido podemos iniciar nossa maquina.
+
+Obs: Nesse passo a passo não deixarei descrito como configurar o IP na CHR do mikrotik, isso será feito em outro tutorial.
+
