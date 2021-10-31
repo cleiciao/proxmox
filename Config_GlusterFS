@@ -1,0 +1,4 @@
+
+Nessa etapa iremos detalhar a configuração do glusterfs no promox para armazenamento distribuido entre os Nós.
+
+Consideramos que os discos estejam conectados e formatados em seus respectivos Nós do Cluster Proxmox.
