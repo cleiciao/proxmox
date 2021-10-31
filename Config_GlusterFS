@@ -17,14 +17,25 @@ Discos
 Consideramos que os discos estejam conectados e formatados em seus respectivos Nós do Cluster Proxmox.
 ###################################################################################################################
 
+Configuração do Disco
+Primeiramente vamos configura nosso disco, para identificar o disco que iremos utilizar usamos o comando? fdisk -l
+que irá listar todos os discos conectados ao nosso servidor.
 
+Vamos criar nossa partição com o comando 
+cfdisk /dev/xxx  
+o CFDISK nos algumas opções para criar nossa partição porém iremos escolher GPT.
 
+Com a partição criada vamos formatar nosso disco
+mkfs.xfs /dev/xxx
 
+Vamos criar um diretório de montagem para nosso disco
 
-Instalação dos pacotes necessários
+mkdir /DATA/vms
 
-Para que as configurações de rede sejam aplicadas sem a necessidade de reiniciar o servidor.
-apt install ifupdown2
+Para que nosso disco seja montado de forma automatica pelo sistema durante o bott vamos configurar o arquivo fstab
+vi /etc/fstab e incluir a linha /dev/xxxx /DATA/vms  xfs dafults 00 podemos salvar o arquivo.
+
+Obs: O xxx no comando cfdis representa o disco que será usado.
 
 Vamos configurar nossas placas de rede restantes para a BOND do Cluster. 
 
@@ -32,3 +43,26 @@ Configurações dos Hosts
 ipdohost1 fqdnhost1 nomedohost
 ipdohost2 fqdnhost2 nomedohost
 ipdohost3 fqdnhost3 nomedohost
+
+
+Agora vamos criar o nosso cluste Na opção DATACENTER vamos até a aba CLUSTER e iremos criar o Cluster inserindo o nome e rede que ele vai usar.
+
+
+Instalação dos pacotes necessários
+
+Para que as configurações de rede sejam aplicadas sem a necessidade de reiniciar o servidor.
+
+apt install ifupdown2 -y 
+
+Instalação do Gluster
+apt install glustefs-server -y 
+
+Iniciando serviço e habilitando no boot do sistema
+
+sytemctl --now glusterd.service
+
+
+Criação do Volume Glusterfs
+
+glsuter volume create VMS "nomedohostproxmox:/DATA/vms"
+
