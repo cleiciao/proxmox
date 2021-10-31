@@ -10,7 +10,7 @@ No Proxmox vamos acessar o SHELL e baixar a imagem que vamos usar, dependendo da
 
 wget https://download.mikrotik.com/routeros/6.48.5/chr-6.48.5.img.zip
 
-Agora que baixamos a imagem vamos descompactar
+O arquivo que baixamos vem compactado para descompactar usamos o comando abaixo
 
 unzip chr-6.48.5.img.zip
 
@@ -23,7 +23,7 @@ Por padrão a imagem da CHR vem com tamanho do disco reduzido 64 Mb, vamos redim
 
 qemu-img resize chr-6.48.5.img
 
-Se aparece "Image Resized" de tudo certo
+Se aparecer "Image Resized" deu tudo certo podemos prosseguir.
 
 Com a VM criada e a imagem de disco que iremos usar baixada vamos importar o disco para VM com o comando 
 
