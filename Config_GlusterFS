@@ -64,5 +64,16 @@ sytemctl --now glusterd.service
 
 Criação do Volume Glusterfs
 
-glsuter volume create VMS "nomedohostproxmox:/DATA/vms"
+gluster volume create VMS "nomedohostproxmox:/DATA/vms"
 
+Iniciando o volume:
+
+gluster vol start VMS
+
+Verificando o status 
+
+glsute vol status VMS
+
+Verificando informações do volume
+
+gluster vol info VMS
