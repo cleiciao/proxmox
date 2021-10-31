@@ -16,3 +16,19 @@ Discos
 1 disco de 1TB para as VMS que iremos criar futuramente.
 Consideramos que os discos estejam conectados e formatados em seus respectivos Nós do Cluster Proxmox.
 ###################################################################################################################
+
+
+
+
+
+Instalação dos pacotes necessários
+
+Para que as configurações de rede sejam aplicadas sem a necessidade de reiniciar o servidor.
+apt install ifupdown2
+
+Vamos configurar nossas placas de rede restantes para a BOND do Cluster. 
+
+Configurações dos Hosts
+ipdohost1 fqdnhost1 nomedohost
+ipdohost2 fqdnhost2 nomedohost
+ipdohost3 fqdnhost3 nomedohost
