@@ -29,6 +29,8 @@ Com a VM criada e a imagem de disco que iremos usar baixada vamos importar o dis
 
 qm importdisk "numero da VM" ex: 100 "imagem do disco" ex: chr-6.48.5.img e o "Storage que será usado" ex: local-lvm
 
+Agora podemos iniciar nossa VM.
+
 O processo de importação demora uns minutos é só aguardar. Após o termino da importação vamos na opção de HARDWARE da maquina para atachar nosso novo disco.
 Com novo disco atachado podemos remover o disco de 1GB que inserimos no momento da criação da VM. Por ultimo podemos conferir no menu opções qual disco esta para ser
 inicializado primeiro. Tudo conferido podemos iniciar nossa maquina.
