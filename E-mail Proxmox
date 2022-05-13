@@ -1,4 +1,23 @@
 O passo a passo descreve como configurar o envio 
 de e-mail de notificação de backups.
 
+Para configurar o envio de e-mail no proxmox precisamos instalar alguns pacotes.
+Mas antes vamos verificar se o postfix esta rodando
+
+systemctl status postfix
+
+o resultado vai ser igual a esse: 
+
+ postfix.service - Postfix Mail Transport Agent
+     Loaded: loaded (/lib/systemd/system/postfix.service; enabled; vendor preset: enabled)
+     Active: active (exited) since Fri 2022-05-13 09:47:32 -03; 4min 38s ago
+    Process: 893 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 893 (code=exited, status=0/SUCCESS)
+        CPU: 1ms
+
+May 13 09:47:32 pve systemd[1]: Starting Postfix Mail Transport Agent...
+May 13 09:47:32 pve systemd[1]: Finished Postfix Mail Transport Agent
+
+
+#####################################################################################################
 
