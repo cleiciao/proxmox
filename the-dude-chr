@@ -19,7 +19,8 @@ Checando as informações do arquivo
 qemu-img info  chr-6.48.5.img
 
 
-Por padrão a imagem da CHR vem com tamanho do disco reduzido 64 Mb, vamos redimencionar o tamanho com o comando 
+Por padrão a imagem da CHR vem com tamanho do disco reduzido 64 Mb, vamos redimencionar o tamanho com o comando.
+Se for usar somente para servidor de VPN pode pular essa etapa
 
 qemu-img resize chr-6.48.5.img +10G
 
