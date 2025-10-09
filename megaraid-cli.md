@@ -1,6 +1,4 @@
-
-
-    # O passo a passo a seguir mostra como instalar a gerência da controladora RAID no Linux.
+# O passo a passo a seguir mostra como instalar a gerência da controladora RAID no Linux.
 
 
 1º Verifique se o servidor tem acesso a internet, importante para instalar os pacotes.
