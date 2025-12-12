@@ -45,6 +45,6 @@ sudo dpkg -imegacli_8.07.14-2_all.deb
 7º Após instalado você pode executar a ferramenta com a opção -h para obter ajuda.
 
 ```bash
-/opt/MegaRAID/MegaCli/MegaCli64 -h
+bash /opt/MegaRAID/MegaCli/MegaCli64 -h
 
 ```
