@@ -9,7 +9,7 @@ ping google.com
 2º Instalação dos pacotes necessários.
 
 ```bash
-apt update && apt instal unzip alien -y
+apt update && apt install libncurses5 unzip alien -y
 ```
 
 3º Baixar o pacote da MegaRaidCli
