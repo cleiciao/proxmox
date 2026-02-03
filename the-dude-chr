@@ -9,7 +9,9 @@ Para baixar a imagem vamos até o site da mikrotik https://mikrotik.com/download
 No Proxmox vamos acessar o SHELL e baixar a imagem que vamos usar, dependendo da data que você estiver instalando poderá existir novas versões.
 
 ```bash
+
 wget https://download.mikrotik.com/routeros/6.48.5/chr-6.48.5.img.zip
+
 ```
 
 O arquivo que baixamos vem compactado para descompactar usamos o comando abaixo
