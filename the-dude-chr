@@ -8,7 +8,9 @@ Para baixar a imagem vamos até o site da mikrotik https://mikrotik.com/download
 
 No Proxmox vamos acessar o SHELL e baixar a imagem que vamos usar, dependendo da data que você estiver instalando poderá existir novas versões.
 
+```bash
 wget https://download.mikrotik.com/routeros/6.48.5/chr-6.48.5.img.zip
+```
 
 O arquivo que baixamos vem compactado para descompactar usamos o comando abaixo
 
@@ -29,6 +31,15 @@ Se aparecer "Image Resized" deu tudo certo podemos prosseguir.
 Com a VM criada e a imagem de disco que iremos usar baixada vamos importar o disco para VM com o comando 
 
 qm importdisk "numero da VM" ex: 100 "imagem do disco" ex: chr-6.48.5.img e o "Storage que será usado" ex: local-lvm
+
+Antes de ligar a VM precismos adicionar o disco na VM
+Exe:
+
+qm set 100 --ide0 local-lvm:vm-120-disk-1
+
+E depois precisamos ajustar a ordem de boot
+
+Exe:qm set 100 --boot order=ide0
 
 Agora podemos iniciar nossa VM.
 
